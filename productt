@@ -1,0 +1,46 @@
+<%@ taglib prefix="fmt" uri="jakarta.tags.fmt" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chi Tiết Sản Phẩm</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 30px; background-color: #f8fafc; }
+        .detail-container { background: white; padding: 30px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); max-width: 500px; margin: auto; }
+        h2 { color: #0f172a; border-bottom: 2px solid #0f172a; padding-bottom: 10px; }
+        table { width: 100%; margin-top: 15px; }
+        td { padding: 8px 0; }
+        .label { font-weight: bold; color: #475569; width: 35%; }
+        .value { color: #0f172a; }
+        .link-back { display: block; text-align: center; margin-top: 25px; color: #3b82f6; text-decoration: none; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <div class="detail-container">
+        <h2>Chi Tiết Sản Phẩm</h2>
+        <table>
+            <tr>
+                <td class="label">Mã SP:</td>
+                <td class="value">${requestScope.product.id}</td>
+            </tr>
+            <tr>
+                <td class="label">Tên sản phẩm:</td>
+                <td class="value">${requestScope.product.name}</td>
+            </tr>
+            <tr>
+                <td class="label">Giá bán:</td>
+                <td class="value"><fmt:formatNumber value="${requestScope.product.price}" pattern="#,##0 VNĐ" /></td>
+            </tr>
+            <tr>
+                <td class="label">Nhà sản xuất:</td>
+                <td class="value">${requestScope.product.manufacturer}</td>
+            </tr>
+            <tr>
+                <td class="label">Mô tả:</td>
+                <td class="value">${requestScope.product.description}</td>
+            </tr>
+        </table>
+        <a href="${pageContext.request.contextPath}/products" class="link-back">Quay lại danh sách</a>
+    </div>
+</body>
+</html>

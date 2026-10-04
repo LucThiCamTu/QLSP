@@ -1,0 +1,21 @@
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Không tìm thấy - 404</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; margin-top: 80px; background-color: #f8fafc; }
+        .container { background: white; padding: 40px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); display: inline-block; }
+        h1 { color: #dc2626; font-size: 48px; margin: 0; }
+        a { display: inline-block; margin-top: 15px; padding: 10px 20px; background-color: #0f172a; color: white; text-decoration: none; border-radius: 4px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>404</h1>
+        <h2>Không tìm thấy sản phẩm!</h2>
+        <p>Sản phẩm bạn đang truy cập không tồn tại hoặc đã bị xóa.</p>
+        <a href="${pageContext.request.contextPath}/products">Quay về danh sách</a>
+    </div>
+</body>
+</html>
